@@ -74,6 +74,15 @@
         }
       },
       {
+        "package": "Plot",
+        "repositoryURL": "https://github.com/johnsundell/plot.git",
+        "state": {
+          "branch": null,
+          "revision": "6dcfc1f246eabf6ea470202244115f73b75c72c4",
+          "version": "0.6.0"
+        }
+      },
+      {
         "package": "Routing",
         "repositoryURL": "https://github.com/vapor/routing.git",
         "state": {
