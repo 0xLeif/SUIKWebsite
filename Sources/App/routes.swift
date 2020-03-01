@@ -6,7 +6,19 @@ public func routes(_ router: Router) throws {
 
     // Basic "It works" example
     router.get { req in
-        try ExampleView().encode(for: req)
+
+    
+        try HTML(
+            .head(
+                .title("My website"),
+                .stylesheet("styles.css")
+            ),
+            .body(
+                ExampleView().body,
+                ExampleView().body,
+                ExampleView().body
+            )
+        ).encode(for: req)
     }
     
     // Basic "Hello, world!" example
