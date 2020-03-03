@@ -2,6 +2,6 @@ import Plot
 
 protocol View {
 
-    var body: HTML { get }
+    var body: Node<HTML.BodyContext> { get }
     
 }

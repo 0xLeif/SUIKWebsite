@@ -10,9 +10,9 @@ import Vapor
 // }
 
 // Modified
-extension View {
+extension HTML {
     public func encode(for req: Request) throws -> EventLoopFuture<Response> {
-        let res = Response(http: .init(headers: ["content-type": "text/html; charset=utf-8"], body: self.body.render()), using: req.sharedContainer)
+        let res = Response(http: .init(headers: ["content-type": "text/html; charset=utf-8"], body: self.render()), using: req.sharedContainer)
         return req.sharedContainer.eventLoop.newSucceededFuture(result: res)
     }
 }
