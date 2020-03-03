@@ -1,14 +1,16 @@
 import Plot
 
 struct ExampleView: View {
+    let example: Example
+    
     var body: Node<HTML.BodyContext> {
         .div(
             .img(
-                .src("https://raw.githubusercontent.com/0xLeif/awesome-swiftuikit/master/assets/BrandedLoadingView.gif")
+                .src(example.imageURL)
             ),
-            .h1("My website"),
-            .p("Writing HTML in Swift is pretty great!")
+            .h1("\(example.title)"),
+            .unwrap(example.description, Node.text),
+            .a(.href(example.codeURL), .p("Source Code"))
         )
-            
     }
 }
